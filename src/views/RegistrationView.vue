@@ -1,13 +1,3 @@
-<script>
-export default{
-      methods:{
-        performRegistration(){
-            //TODO: Implement registration
-            this.$router.push({name: "registrationsucces"})
-        }
-    }
-}
-</script>
 
 <template>
   <main>
@@ -36,9 +26,9 @@ export default{
               <input type="checkbox" value="remember-me"> Remember me
             </label>
           </div>
-          <button @click="performRegistration()" class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+          <button @click="performRegistration()" class="w-100 btn btn-lg btn-primary" type="button">Sign up</button>
           <hr class="my-4">
-          <small>Have an account? Go <a href="#">log in</a></small>
+          <small>Have an account? Go <a @click="this.$router.push({name: 'login'})" >log in</a></small>
           <br>
           <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
         </form>
@@ -48,7 +38,25 @@ export default{
   </main>
 </template>
 
+<script>
+export default{
+      methods:{
+        performRegistration(){
+            //TODO: Implement registration
+            this.$router.push({name: "registrationsucces"})
+        }
+    }
+}
+</script>
+
 
 <style>
+a{
+  text-decoration-color: blue !important;
+  text-decoration-line: underline !important;
+}
 
+a:hover{
+  cursor:pointer;
+}
 </style>
