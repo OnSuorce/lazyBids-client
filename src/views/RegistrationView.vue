@@ -1,5 +1,12 @@
-<script setup>
-
+<script>
+export default{
+      methods:{
+        performRegistration(){
+            //TODO: Implement registration
+            this.$router.push({name: "registrationsucces"})
+        }
+    }
+}
 </script>
 
 <template>
@@ -29,7 +36,7 @@
               <input type="checkbox" value="remember-me"> Remember me
             </label>
           </div>
-          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+          <button @click="performRegistration()" class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
           <hr class="my-4">
           <small>Have an account? Go <a href="#">log in</a></small>
           <br>
