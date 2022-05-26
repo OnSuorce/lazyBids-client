@@ -10,3 +10,6 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
+
+//TODO: Navbar component
+//TODO: Service class for lazyBids-api
